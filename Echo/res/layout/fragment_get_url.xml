@@ -1,0 +1,102 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context="com.example.echo.GetUrl$PlaceholderFragment" >
+	<LinearLayout android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:background="@color/grey"
+	     android:orientation="vertical" >
+	    
+	    <TextView
+	        android:id="@+id/name1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/name1" />
+	    <TextView
+	        android:id="@+id/class_name1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/class_name1" />
+	    <TextView
+	        android:id="@+id/class_num1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/class_num1" />
+	    <TextView
+	        android:id="@+id/desc1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/desc1" />
+	    <TextView
+	        android:id="@+id/loc1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/loc1" />
+	    <TextView
+	        android:id="@+id/url"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/loc1" />
+	    
+	  </LinearLayout>
+	  
+	  <LinearLayout android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	     android:orientation="vertical" >
+	    <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/name2" />
+	    <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/class_name2" />
+	    <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/class_num2" />
+	    <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/desc2" />
+	    <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/loc2" />
+	 
+	  </LinearLayout>
+	  
+	  <LinearLayout android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:background = "@color/grey"
+	     android:orientation="vertical">
+	    <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/name3" />
+	    <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/class_name3" />
+	    <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/class_num3" />
+	    <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/desc3" />
+	    <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/loc3" />
+	   
+	  </LinearLayout>
+
+</LinearLayout>

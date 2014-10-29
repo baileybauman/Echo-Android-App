@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Bailey/Development/new_workspace/workspace3/Echo/libs/mediafire-java-sdk-master.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Bailey/Development/new_workspace/workspace3/Echo/libs/gson-2.3.jar"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
+	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/mediafire-java-sdk"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
+	<classpathentry kind="output" path="bin/classes"/>
+</classpath>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Echo</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_display_message">DisplayMessageActivity</string>
+    <string name="title_activity_get_url">GetUrlActivity</string>
+    <string name="name">enter name</string>
+    <string name="example">this is an example</string>
+    <string name="edit_message">this is an example1</string>
+    <string name="edit_message2">this is an example2</string>
+    <string name="location_description">enter location</string>
+    <string name="button_send">send</string>
+    <string name="button">send</string>
+    
+    <string name="name1">send</string>
+    <string name="name2">send</string>
+    <string name="name3">send</string>
+    
+    <string name="class_name1">send</string>
+    <string name="class_name2">send</string>
+    <string name="class_name3">send</string>
+    
+    <string name="class_num1">send</string>
+    <string name="class_num2">send</string>
+    <string name="class_num3">send</string>
+    
+    <string name="desc1">send</string>
+    <string name="desc2">send</string>
+    <string name="desc3">send</string>
+    
+    <string name="loc1">send</string>
+    <string name="loc2">send</string>
+    <string name="loc3">send</string>
+    
+
+</resources>
