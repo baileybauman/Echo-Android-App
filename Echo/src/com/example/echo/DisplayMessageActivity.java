@@ -14,6 +14,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -24,7 +25,7 @@ public class DisplayMessageActivity extends ActionBarActivity {
 	String pathForUrl = "";
 	public final static String EXTRA_MESSAGE = "com.example.echo.MESSAGE";
 	private static final int RESULT_LOAD_IMAGE = 1;
-	
+	//load picture
 	public void displayInfo(View view) {
 	    // Do something in response to button
 		Intent i = new Intent(
@@ -75,6 +76,11 @@ public class DisplayMessageActivity extends ActionBarActivity {
 	            ImageView imageView = (ImageView) findViewById(R.id.imgView);
 	            imageView.setImageBitmap(BitmapFactory.decodeFile(picturePath));
 	         
+	            Button submitButton = (Button) findViewById(R.id.buttonNextPicture);
+	            submitButton.setVisibility(View.VISIBLE);
+	            Button chooseButton = (Button) findViewById(R.id.buttonLoadPicture);
+	            chooseButton.setVisibility(View.GONE);
+	            
 	            
 	           
 			 } else {
@@ -97,6 +103,7 @@ public class DisplayMessageActivity extends ActionBarActivity {
 			getSupportFragmentManager().beginTransaction()
 					.add(R.id.container, new PlaceholderFragment()).commit();
 		}
+		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 	}
 
 	@Override
