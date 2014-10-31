@@ -7,22 +7,23 @@
         android:id="@+id/imgView"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"></ImageView>
-    <Button
-        android:id="@+id/buttonLoadPicture"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="0"
-        android:text="Load Picture"
-        android:layout_gravity="center"
-        android:onClick="displayInfo"></Button>
-    
+        android:layout_weight="1"/>
+  	<Button
+	        android:id="@+id/buttonLoadPicture"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="0"
+	        android:text="Choose Picture"
+	        android:layout_gravity="center"
+	        android:onClick="displayInfo"/>
+	    
     <Button
         android:id="@+id/buttonNextPicture"
+        android:visibility="gone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="0"
-        android:text="Next Page"
-        android:layout_gravity="bottom"
-        android:onClick="nextActivity"></Button>
+        android:text="Submit"
+        android:layout_gravity="center"
+        android:onClick="nextActivity"/>
 </LinearLayout>

@@ -23,7 +23,7 @@ import android.os.Build;
 import android.preference.PreferenceManager;
 
 public class GetUrlActivity extends ActionBarActivity {
-
+	String full_url = "";
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -32,11 +32,15 @@ public class GetUrlActivity extends ActionBarActivity {
 			getSupportFragmentManager().beginTransaction()
 					.add(R.id.container, new PlaceholderFragment()).commit();
 		}
-		
+		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 		IntentFilter filter = new IntentFilter();
         filter.addAction("com.hackathon.GOT_URL");
 		Intent i = registerReceiver(bc, filter);
 
+		
+//		SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+//		String name = preferences.getString("UserName", "");
+//		Log.d("name", name);
 		
 		Intent intent = getIntent();
 		String message = intent.getStringExtra(DisplayMessageActivity.EXTRA_MESSAGE);
@@ -46,26 +50,43 @@ public class GetUrlActivity extends ActionBarActivity {
 		
 	   example.startProcess(message);
 	   
-//	   ImageView imageView = (ImageView) findViewById(R.id.imgView);
-//       imageView.setImageBitmap(BitmapFactory.decodeFile(picturePath));
-	   SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
-	   String url = preferences.getString("url", "");    
-	   String name = preferences.getString("UserName", "");
-	   String loc = preferences.getString("loc_desc", "");
-	   String c_name = preferences.getString("class_name", "");
-	   String c_num = preferences.getString("class_num", "");
+	   Log.d("url from broad", full_url);
+//	   Intent intent2 = new Intent(this, ResultsActivity.class);
+//	   startActivity(intent); 
+////	   
+//	   SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+//	   String name = preferences.getString("url", "");
+//	   Log.d("FINAL url", name);
+//	   
 	   
-	   TextView nameView = (TextView) findViewById(R.id.name1);
-	   TextView classNameView = (TextView) findViewById(R.id.class_name1);
-	   TextView classNumView = (TextView) findViewById(R.id.class_num1);
-	   TextView locView = (TextView) findViewById(R.id.loc1);
-	   TextView urlView = (TextView) findViewById(R.id.url);
+//	   LocationManager lm = (LocationManager)getSystemService(Context.LOCATION_SERVICE);
+//	   Location location = lm.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
+//	   double longi = 0;
+//	   double lat = 0; 
+//	   if(location != null) {
+//		   longi = location.getLongitude();
+//		   lat = location.getLatitude();
+//	   }
+//	   
+//	   SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+//	   String url = preferences.getString("url", "");    
+//	   String name = preferences.getString("UserName", "");
+////	   Log.d("name", name);
+//	   String loc = preferences.getString("loc_desc", "");
+//	   String c_name = preferences.getString("class_name", "");
+//	   String c_num = preferences.getString("class_num", "");
+	   
+//	   TextView nameView = (TextView) findViewById(R.id.cool_name1);
+//	   TextView classNameView = (TextView) findViewById(R.id.class_name1);
+//	   TextView classNumView = (TextView) findViewById(R.id.class_num1);
+//	   TextView locView = (TextView) findViewById(R.id.loc1);
+//	   TextView urlView = (TextView) findViewById(R.id.url);
 	  
-	   nameView.setText(name);
-	   classNameView.setText(c_name);
-	   classNumView.setText(c_num);
-	   locView.setText(loc);
-	   urlView.setText(url);
+//	   nameView.setText(name);
+//	   classNameView.setText(c_name);
+//	   classNumView.setText(c_num);
+//	   locView.setText(loc);
+//	   urlView.setText(url);
 	   
 	}
 
@@ -109,6 +130,16 @@ public class GetUrlActivity extends ActionBarActivity {
 		@Override
 		public void onReceive(Context arg0, Intent arg1) {
 			// TODO Auto-generated method stub
+			String a = arg1.getStringExtra("url");
+			Log.d("arg", a);
+			full_url = a;
+			SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(arg0);
+			String name = preferences.getString("url", "");
+			Log.d("FINAL url", name);
+			
+			Intent intent = new Intent(arg0, ResultsActivity.class);
+			startActivity(intent); 
+			
 			
 		}
     	
